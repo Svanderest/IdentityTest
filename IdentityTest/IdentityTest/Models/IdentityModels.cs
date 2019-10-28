@@ -17,12 +17,28 @@ namespace IdentitySample.Models
             return userIdentity;
         }
     }
+    
+
+    public class ApplicationRole : IdentityRole
+    {
+        public ApplicationRole() : base()
+        {
+
+        }
+
+        public ApplicationRole(string name) : base(name)
+        {
+        }
+
+        public bool IsLocalRole { get; set; }
+    }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DefaultConnection")
         {
+            
         }
 
         static ApplicationDbContext()
@@ -36,5 +52,7 @@ namespace IdentitySample.Models
         {
             return new ApplicationDbContext();
         }
+
+        public new IDbSet<ApplicationRole> Roles { get; set; }
     }
 }

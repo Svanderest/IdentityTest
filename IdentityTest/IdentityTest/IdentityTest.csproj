@@ -175,6 +175,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910281704270_init.cs" />
+    <Compile Include="Migrations\201910281704270_init.Designer.cs">
+      <DependentUpon>201910281704270_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910281710437_roles_in_dbContext.cs" />
+    <Compile Include="Migrations\201910281710437_roles_in_dbContext.Designer.cs">
+      <DependentUpon>201910281710437_roles_in_dbContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -267,6 +276,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910281704270_init.resx">
+      <DependentUpon>201910281704270_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910281710437_roles_in_dbContext.resx">
+      <DependentUpon>201910281710437_roles_in_dbContext.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
